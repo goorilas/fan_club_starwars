@@ -7,18 +7,14 @@
     text-align: center;
     width: 100%;
 
-    
-
     h4 {
         color: variaveis.$fontColor;
         padding: 8px;
 
         @media (max-width: 768px) {
-            display: block;
-            font-size: 12px;
-            margin-right: 20%;
+            text-align: justify;
+            margin-left: 20px;
         }
-    
     }
 
     &__color {
