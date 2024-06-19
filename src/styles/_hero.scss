@@ -1,0 +1,18 @@
+@use 'variaveis';
+
+.hero {
+    &__img {
+        width: 100%;
+        background-size: contain;
+        height: 600px;
+    }
+
+    &__text {
+        color: variaveis.$fontColorPrimary;
+        display: block;
+        margin: 24px 8px;
+        text-align: justify;
+        font-family: variaveis.$fontMain;
+    }
+}
+

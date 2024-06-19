@@ -1,0 +1,81 @@
+@use 'variaveis';
+
+.header {
+    max-width: 1600px;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999px;
+
+    @media (max-width: 768px) {
+        display: block;
+
+        .header__link {
+            display: block;
+            margin: 8px;
+        }
+
+        .header__link--mais {
+            padding: 0;
+            margin-top: 16px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        list-style: none;
+
+        &--mais {
+            color: variaveis.$fontColorPrimary;
+            padding: 8px;
+            font-family: variaveis.$fontMain;
+            margin: 8px;
+            background-color: variaveis.$colorPrimaryBtn;
+            border-radius: 5px;
+            border: 1px block variaveis.$colorSecondaryBtn;
+            opacity: 50%;
+
+            &:hover {
+                color: variaveis.$fontColor;
+                background-color: variaveis.$colorSecondaryBtn;
+                opacity: 80%;
+                
+            }
+        }
+    }
+
+        
+
+        &__logo {
+            width: 150px;
+            height: 50px;
+            margin: 15px;
+            opacity: 90%;
+            animation: fadeInOut 3s infinite;
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            width: 40px;
+            display: flex;
+            position: absolute;
+            left: 300px;
+
+        }
+    }
+}
